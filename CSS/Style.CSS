@@ -1,0 +1,70 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.paisaje {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .paisa{
+    width: 100vw;
+    height: 100vh;
+  }
+  .polvo {
+    width: 340px;
+    height: 440px;
+    position: absolute;
+    background-position: center center;
+    background-size: 100% 100%;
+    animation: aparecer 2s linear infinite;
+    top:400px;
+  }
+  .aura{
+    display: flex;
+    left: 0px;
+    width: auto;
+    height: 200px;
+  }
+  .goku {
+    width: 125px;
+    height: 250px;
+    background-position: center center;
+    background-size: 100% 100%;
+    animation:flotar 2s linear infinite;
+    position: absolute;
+    top:150px;
+  }
+  .Goku{
+    display:inline-block;
+    width: auto;
+    height: 400px;
+    filter:drop-shadow (0px 0px 10px red);
+  }
+  
+  @keyframes flotar {
+    0% {
+      transform: translateY(0px);
+      filter: drop-shadow(3px 4px 10px red);
+    }
+    100% {
+      transform: translateY(100px);
+      filter: drop-shadow(3px 4px 10px yellow);
+    }
+  }
+  @keyframes aparecer {
+    0% {
+      filter:opacity(0%)
+    }
+    100% {
+      transform: translateY(60px);
+      filter:opacity(100%);
+    }
+  }
